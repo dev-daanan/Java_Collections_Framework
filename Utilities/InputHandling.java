@@ -79,4 +79,30 @@ public class InputHandling {
         } while (true);
         return inputInt;
     }
+
+    public static int getIntInput() {
+        String inputString = null;
+        int inputInt = 0;
+//        System.out.println(prompt);
+        do {
+            try {
+                System.out.print("Enter input -> ");
+                inputString = scanner.nextLine();
+                inputInt = Integer.parseInt(inputString);
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid Input. Try again.");
+                scanner.nextLine(); // Clear the invalid input
+                continue;
+            } catch (NoSuchElementException e) {
+                System.out.println("No input detected. Try Again.");
+                continue;
+            } catch (Exception e) {
+                System.out.println("Unexpected Error: Printing Trace...");
+                e.printStackTrace();
+                continue;
+            }
+            break;
+        } while (true);
+        return inputInt;
+    }
 }

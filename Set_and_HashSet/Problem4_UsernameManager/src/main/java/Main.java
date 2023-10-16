@@ -10,8 +10,8 @@ public class Main {
         usernameManager.addUsername("Joey");
         usernameManager.addUsername("Monica");
         usernameManager.addUsername(InputHandling.getInput("Enter a username: "));
-        System.out.println("check if List has 'Ross': " + usernameManager.checkUsername("Ross"));
-        System.out.println("check if List has 'Batman': " + usernameManager.checkUsername("Batman"));
+        System.out.println("Does 'Ross' exist in the Set: "+usernameManager.usernameExists("Ross"));
+        System.out.println("Does 'Batman' exist in the Set: " +usernameManager.usernameExists("Batman"));
         usernameManager.displayAllUsernames();
         System.out.println("Number of names in set: " + usernameManager.getTotalUsernames());
 

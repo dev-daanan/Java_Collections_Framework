@@ -13,12 +13,18 @@ public class UsernameManager {
         usernames = new HashSet<>();
     }
 
-    public boolean checkUsername(String username) {
-        return usernames.contains(username);
+    public boolean usernameExists(String username) {
+        boolean usernameExists = usernames.contains(username);
+        if (usernameExists) {
+            System.out.println(username + " already exists in the Set.");
+        } else {
+            System.out.println(username + " doesn't exist in the Set.");
+        }
+        return usernameExists;
     }
 
     public void addUsername(String username) {
-        if (!checkUsername(username)) {
+        if (!usernameExists(username)) {
             usernames.add(username);
             System.out.println(username + " entered to the list successfully!");
         } else {

@@ -1,19 +1,28 @@
 package Utilities;
 
+import java.util.InputMismatchException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class InputHandling {
     private static final Scanner scanner = new Scanner(System.in);
-    public String getInput() {
-        String inputString;
+
+    public static String getInput() {
+        String inputString = null;
         do {
             try {
                 System.out.println("Enter input -> ");
                 inputString = scanner.nextLine();
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid Input. Try again.");
+                scanner.nextLine(); // Clear the invalid input
+                continue;
             } catch (NoSuchElementException e) {
-                System.out.println("Must enter valid input. Try again.");
-
+                System.out.println("No input detected. Try Again.");
+                continue;
+            } catch (Exception e) {
+                System.out.println("Unexpected Error: Printing Trace...");
+                e.printStackTrace();
                 continue;
             }
             break;

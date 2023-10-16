@@ -1,0 +1,21 @@
+# Compiled bytecode files
+*.class
+
+# Log files
+*.log
+
+# Build directories
+target/
+out/
+build/
+
+# Other ignored files
+*.iml
+*.bak
+*.swp
+*.swo
+
+# Directories for IDE-specific settings
+.idea/
+.settings/
+.vscode/

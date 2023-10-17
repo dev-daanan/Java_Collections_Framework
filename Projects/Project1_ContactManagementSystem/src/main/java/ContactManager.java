@@ -6,15 +6,15 @@ import java.util.HashMap;
 
 import static Utilities.InputHandling.*;
 
-public class ContactManagementSystem {
+public class ContactManager {
     private final ArrayList<Contact> contactArrayList;
     private final HashMap<String, Contact> contactHashMap;
 
-    public ContactManagementSystem(ArrayList<Contact> contactArrayList, HashMap<String, Contact> contactHashMap) {
+    public ContactManager(ArrayList<Contact> contactArrayList, HashMap<String, Contact> contactHashMap) {
         this.contactArrayList = contactArrayList;
         this.contactHashMap = contactHashMap;
     }
-    public ContactManagementSystem() {
+    public ContactManager() {
         this(new ArrayList<>(), new HashMap<>());
     }
 

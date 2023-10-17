@@ -105,4 +105,15 @@ public class InputHandling {
         } while (true);
         return inputInt;
     }
+
+    // TODO: 2023-10-17 Add validation handling to getNameInput, getEmailInput(), and getPhoneNumberInput()
+    public static String getNameInput() {
+        return getInput("Please enter your full name. (Eg. John Smith)");
+    }
+    public static String getEmailInput() {
+        return getInput("Please enter your Email. (Eg. johnsmith@example.com)");
+    }
+    public static String getPhoneNumberInput() {
+        return getInput("Please enter your phone number. (Eg. 1234567890)");
+    }
 }
